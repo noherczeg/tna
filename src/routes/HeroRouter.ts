@@ -1,6 +1,7 @@
 import {Router, Request, Response, NextFunction} from 'express';
 import IHeroRouter from "./IHeroRouter";
 import IHero from "./IHero";
+
 const Heroes = require('../data');
 
 export class HeroRouter implements IHeroRouter {
@@ -20,8 +21,8 @@ export class HeroRouter implements IHeroRouter {
   }
 
   public getOne(req: Request, res: Response, next: NextFunction): void {
-    let query: Number = parseInt(req.params.id);
-    let hero: IHero = Heroes.find(hero => hero.id === query);
+    const query: Number = parseInt(req.params.id);
+    const hero: IHero = Heroes.find(hero => hero.id === query);
     if (hero) {
       res.status(200)
         .send({
@@ -29,8 +30,7 @@ export class HeroRouter implements IHeroRouter {
           status: res.status,
           hero
         });
-    }
-    else {
+    } else {
       res.status(404)
         .send({
           message: 'No hero found with the given id.',
