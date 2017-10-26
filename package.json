@@ -1,0 +1,26 @@
+{
+  "name": "tna",
+  "version": "1.0.0",
+  "description": "Simple NodeJS TypeScript REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp srcs && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Norbert Csaba Herczeg <noherczeg@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "0.0.33",
+    "@types/express": "^4.0.33",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^6.0.46",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.1",
+    "typescript": "2.5.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  }
+}
