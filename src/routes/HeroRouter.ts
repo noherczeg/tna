@@ -47,6 +47,5 @@ export class HeroRouter implements IHeroRouter {
 }
 
 const heroRoutes = new HeroRouter();
-heroRoutes.init();
 
 export default heroRoutes.router;
